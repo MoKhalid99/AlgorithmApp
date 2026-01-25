@@ -47,9 +47,15 @@
             <div class="row g-4">
                 @foreach (var lang in OtherLanguages)
                 {
-                    <a href="/quiz/@lang.UrlName" class="glass-card ...">
-                        <h5 class="fw-bold">@lang.Name</h5>
-                    </a>
+                    <div class="col-6 col-md-3">
+                        <a href="/quiz/@lang.UrlName" class="glass-card text-decoration-none">
+                            <div class="icon-glow-box">
+                                <i class="@lang.IconClass"></i>
+                            </div>
+                            <h5 class="lang-name">@lang.Name</h5>
+                            <span class="start-badge">ابدأ الآن</span>
+                        </a>
+                    </div>
                 }
             </div>
         </div>
@@ -64,16 +70,16 @@
 
     List<LanguageItem> WebLanguages = new()
     {
-        new("HTML", "HTML", "/images/html.png", "bi bi-filetype-html"),
-        new("CSS", "CSS", "/images/css.png", "bi bi-filetype-css"),
-        new("JavaScript", "JavaScript", "/images/js.png", "bi bi-filetype-js"),
-        new("React", "React", "/images/react.png", "bi bi-filetype-jsx")
+        new("HTML", "HTML", "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"),
+        new("CSS", "CSS", "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png"),
+        new("JavaScript", "JavaScript", "https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png"),
+        new("React", "React", "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg")
     };
 
     List<LanguageItem> OtherLanguages = new()
     {
-        new("C#", "CSharp", "", "bi bi-microsoft"),
-        new("Python", "Python", "", "bi bi-filetype-py"),
-        new("Java", "Java", "", "bi bi-cup-hot")
+        new("C#", "CSharp", "", "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png"),
+        new("Python", "Python", "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"),
+        new("Java", "Java", "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg")
     };
 }
