@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @rendermode InteractiveServer
 
 <div class="main-bg">
@@ -21,9 +21,15 @@
             <div class="row g-4">
                 @foreach (var lang in WebLanguages)
                 {
-                    <a href="/quiz/@lang.UrlName" class="glass-card ...">
-                        <h5 class="fw-bold">@lang.Name</h5>
-                    </a>
+                    <div class="col-6 col-md-3">
+                        <a href="/quiz/@lang.UrlName" class="glass-card text-decoration-none">
+                            <div class="icon-glow-box">
+                                <i class="@lang.IconClass"></i>
+                            </div>
+                            <h5 class="lang-name">@lang.Name</h5>
+                            <span class="start-badge">ابدأ الآن</span>
+                        </a>
+                    </div>
                 }
             </div>
         </div>
@@ -35,7 +41,7 @@
                 <div class="icon-box me-3 bg-warning-gradient">
                     <i class="bi bi-cpu-fill"></i>
                 </div>
-                <h3 class="text-white fw-bold m-0 text-end w-100">البرمجة والخلفيات <span class="text-warning fs-6 fw-normal">(Backend & Core)</span></h3>
+                <h3 class="text-white fw-bold m-0 text-end w-100">البرمجة  <span class="text-warning fs-6 fw-normal">(Backend & Core)</span></h3>
             </div>
 
             <div class="row g-4">
@@ -51,7 +57,6 @@
     </div>
 </div>
 
-<div class="chat-fab"><i class="bi bi-chat-dots-fill"></i></div>
 
 @code {
     
