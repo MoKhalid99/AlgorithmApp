@@ -1,0 +1,74 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<div class="main-bg">
+    <div class="stars-container"></div>
+
+    <div class="container py-5 text-center position-relative" style="z-index: 2;">
+
+        <div class="mb-5 animate__animated animate__fadeInDown">
+            <h1 class="hero-title">اختبر مهاراتك البرمجية </h1>
+            <p class="text-light opacity-75 fs-5">اختر التحدي </p>
+        </div>
+
+        <div class="section-container mb-5 animate__animated animate__fadeInUp">
+            <div class="section-header d-flex align-items-center mb-4">
+                <div class="icon-box me-3">
+                    <i class="bi bi-globe2"></i>
+                </div>
+                <h3 class="text-white fw-bold m-0 text-end w-100">تطوير الويب <span class="text-info fs-6 fw-normal">(Web Development)</span></h3>
+            </div>
+            <div class="row g-4">
+                @foreach (var lang in WebLanguages)
+                {
+                    <a href="/quiz/@lang.UrlName" class="glass-card ...">
+                        <h5 class="fw-bold">@lang.Name</h5>
+                    </a>
+                }
+            </div>
+        </div>
+
+        <hr class="my-5 border-secondary opacity-50" />
+
+        <div class="section-container animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+            <div class="section-header d-flex align-items-center mb-4">
+                <div class="icon-box me-3 bg-warning-gradient">
+                    <i class="bi bi-cpu-fill"></i>
+                </div>
+                <h3 class="text-white fw-bold m-0 text-end w-100">البرمجة والخلفيات <span class="text-warning fs-6 fw-normal">(Backend & Core)</span></h3>
+            </div>
+
+            <div class="row g-4">
+                @foreach (var lang in OtherLanguages)
+                {
+                    <a href="/quiz/@lang.UrlName" class="glass-card ...">
+                        <h5 class="fw-bold">@lang.Name</h5>
+                    </a>
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chat-fab"><i class="bi bi-chat-dots-fill"></i></div>
+
+@code {
+    
+    record LanguageItem(string Name, string UrlName, string Image, string IconClass = "");
+
+    List<LanguageItem> WebLanguages = new()
+    {
+        new("HTML", "HTML", "/images/html.png", "bi bi-filetype-html"),
+        new("CSS", "CSS", "/images/css.png", "bi bi-filetype-css"),
+        new("JavaScript", "JavaScript", "/images/js.png", "bi bi-filetype-js"),
+        new("React", "React", "/images/react.png", "bi bi-filetype-jsx")
+    };
+
+    List<LanguageItem> OtherLanguages = new()
+    {
+        new("C#", "CSharp", "", "bi bi-microsoft"),
+        new("Python", "Python", "", "bi bi-filetype-py"),
+        new("Java", "Java", "", "bi bi-cup-hot")
+    };
+}

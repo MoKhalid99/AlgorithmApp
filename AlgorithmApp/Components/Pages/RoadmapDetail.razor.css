@@ -1,0 +1,68 @@
+﻿/* الخط العمودي */
+.roadmap-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+/* صندوق الخطوة */
+.step-box {
+    background: linear-gradient(135deg, #0f4c75, #3282b8); 
+    width: 60%; 
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto; /* توسيط الصندوق */
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(0, 120, 212, 0.3);
+    transition: transform 0.3s;
+    color: white;
+    text-align: center;
+}
+
+    .step-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(0, 120, 212, 0.6);
+        border-color: #00f2fe;
+    }
+
+    /* النقطة التي تربط الصندوق بالخط */
+    .step-box::before {
+        content: '';
+        position: absolute;
+        top: -10px; /* فوق الصندوق */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+        background: #00f2fe;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #00f2fe;
+    }
+
+    /* الخط الصغير الواصل بين الصندوق والنقطة */
+    .step-box::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 10px;
+        width: 2px;
+        background: #00f2fe;
+    }
+
+/* تخصيص زر "جاهز لسوق العمل" */
+.border-success {
+    border-color: #00f2fe !important;
+    color: #00f2fe !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}

@@ -1,0 +1,2003 @@
+﻿[
+  {
+    "LanguageName": "C#",
+    "Questions": [
+      {
+        "Id": 1,
+        "Text": "What is the base class for all types in C#?",
+        "Options": [ "System.Object", "System.Base", "System.Root", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 2,
+        "Text": "Which keyword is used to prevent a class from being inherited?",
+        "Options": [ "static", "sealed", "abstract", "private" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 3,
+        "Text": "What is the default value of a bool?",
+        "Options": [ "true", "null", "false", "0" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 4,
+        "Text": "Which interface is used for LINQ querying?",
+        "Options": [ "IQueryable", "IList", "IDictionary", "ISet" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 5,
+        "Text": "How do you start a task asynchronously?",
+        "Options": [ "Task.Go()", "Task.Run()", "Task.StartAsync()", "await Task()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 6,
+        "Text": "Which of the following is a reference type in C#?",
+        "Options": [ "int", "bool", "string", "double" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 7,
+        "Text": "Which keyword is used to handle exceptions in C#?",
+        "Options": [ "catch", "throw", "try", "All of the above" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 8,
+        "Text": "What does the 'using' statement ensure in C#?",
+        "Options": [ "Fast execution", "Object disposal", "Memory allocation", "Code obfuscation" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 9,
+        "Text": "Which operator is used to check if an object is of a certain type?",
+        "Options": [ "as", "is", "typeof", "instanceof" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 10,
+        "Text": "What is the purpose of the 'virtual' keyword?",
+        "Options": [ "To hide a method", "To allow method overriding", "To make a class static", "To declare a constant" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 11,
+        "Text": "Which collection stores data in Key-Value pairs?",
+        "Options": [ "List", "Array", "Dictionary", "Stack" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 12,
+        "Text": "What is the size of an 'int' in C#?",
+        "Options": [ "16-bit", "32-bit", "64-bit", "8-bit" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 13,
+        "Text": "Which keyword is used to access members of the base class?",
+        "Options": [ "this", "parent", "base", "super" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 14,
+        "Text": "What is a 'Nullable' type?",
+        "Options": [ "A type that can be null", "A type that cannot be null", "An empty class", "A void method" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 15,
+        "Text": "Which access modifier makes a member accessible only within the same assembly?",
+        "Options": [ "private", "protected", "internal", "public" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 16,
+        "Text": "What is the entry point of a C# console application?",
+        "Options": [ "Start()", "Main()", "Execute()", "Program()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 17,
+        "Text": "Which of these is NOT a pillar of OOP?",
+        "Options": [ "Encapsulation", "Inheritance", "Compilation", "Polymorphism" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 18,
+        "Text": "What does the 'readonly' keyword do?",
+        "Options": [ "Makes a variable constant", "Value can only be assigned in constructor", "Prevents reading", "Allows global access" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 19,
+        "Text": "Which namespace contains common collection classes like List?",
+        "Options": [ "System.IO", "System.Collections.Generic", "System.Linq", "System.Net" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 20,
+        "Text": "What is the purpose of the 'finally' block?",
+        "Options": [ "To catch errors", "To skip execution", "To execute code regardless of error", "To terminate the program" ],
+        "CorrectAnswer": "C"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Python",
+    "Questions": [
+      {
+        "Id": 21,
+        "Text": "How do you define a function in Python?",
+        "Options": [ "func", "def", "function", "define" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 22,
+        "Text": "Which data type is immutable?",
+        "Options": [ "List", "Dictionary", "Tuple", "Set" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 23,
+        "Text": "How do you comment a single line?",
+        "Options": [ "//", "/* */", "#", "" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 24,
+        "Text": "What library is used for data analysis?",
+        "Options": [ "Django", "Flask", "Pandas", "PyGame" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 25,
+        "Text": "What is the output of print(2 ** 3)?",
+        "Options": [ "6", "8", "9", "5" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 26,
+        "Text": "Which keyword is used to import a module?",
+        "Options": [ "using", "include", "import", "require" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 27,
+        "Text": "What is the correct way to create a list?",
+        "Options": [ "list = []", "list = {}", "list = ()", "list = <>" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 28,
+        "Text": "Which method adds an element to the end of a list?",
+        "Options": [ "add()", "push()", "append()", "insert()" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 29,
+        "Text": "What is the output of bool(0)?",
+        "Options": [ "True", "False", "None", "Error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 30,
+        "Text": "How do you start a 'for' loop in Python?",
+        "Options": [ "for x in y:", "for (x; y; z)", "foreach x in y", "for x to y:" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 31,
+        "Text": "What is the correct extension for Python files?",
+        "Options": [ ".pt", ".pyt", ".py", ".ptr" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 32,
+        "Text": "Which function is used to get input from the user?",
+        "Options": [ "get()", "scanf()", "input()", "read()" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 33,
+        "Text": "Which of these is a Python dictionary?",
+        "Options": [ "[\"a\", \"b\"]", "(\"a\", \"b\")", "{\"a\": 1, \"b\": 2}", "set(\"a\", \"b\")" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 34,
+        "Text": "What does the 'range(5)' function generate?",
+        "Options": [ "1 to 5", "0 to 4", "0 to 5", "1 to 4" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 35,
+        "Text": "Which keyword is used to create a class?",
+        "Options": [ "struct", "object", "class", "define" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 36,
+        "Text": "How do you handle exceptions in Python?",
+        "Options": [ "try/except", "try/catch", "do/while", "if/error" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 37,
+        "Text": "What is the output of print('abc'.upper())?",
+        "Options": [ "abc", "Abc", "ABC", "Error" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 38,
+        "Text": "Which operator is used for floor division?",
+        "Options": [ "/", "//", "%", "\\" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 39,
+        "Text": "What is 'self' in a Python class method?",
+        "Options": [ "A reserved keyword", "The class itself", "The instance of the object", "The parent class" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 40,
+        "Text": "Which of these is used to remove whitespace from both ends of a string?",
+        "Options": [ "strip()", "cut()", "trim()", "clear()" ],
+        "CorrectAnswer": "A"
+      }
+    ]
+  },
+  {
+    "LanguageName": "JavaScript",
+    "Questions": [
+      {
+        "Id": 41,
+        "Text": "Which keyword is used to declare a block-scoped variable?",
+        "Options": [ "var", "let", "set", "block" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 42,
+        "Text": "What is the result of '2' + 2?",
+        "Options": [ "4", "22", "NaN", "Error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 43,
+        "Text": "Which operator checks for both value and type equality?",
+        "Options": [ "==", "=", "===", "&&" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 44,
+        "Text": "What does 'NaN' stand for?",
+        "Options": [ "Not a Number", "New and Null", "None and Nil", "Not a Node" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 45,
+        "Text": "How do you write an arrow function?",
+        "Options": [ "function => {}", "() => {}", "-> {}", "call => {}" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 46,
+        "Text": "What is the result of 'typeof null'?",
+        "Options": [ "null", "undefined", "object", "string" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 47,
+        "Text": "Which method converts a JSON string into a JS object?",
+        "Options": [ "JSON.parse()", "JSON.stringify()", "JSON.object()", "JSON.decode()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 48,
+        "Text": "How do you add an element to the beginning of an array?",
+        "Options": [ "push()", "pop()", "shift()", "unshift()" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 49,
+        "Text": "What is a 'closure'?",
+        "Options": [ "A way to close a browser tab", "A function with access to its outer scope", "A private class", "A syntax error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 50,
+        "Text": "Which method is used to call a function after a delay?",
+        "Options": [ "setTimeout()", "setInterval()", "wait()", "delay()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 51,
+        "Text": "How can you detect the client's browser name?",
+        "Options": [ "browser.name", "navigator.appName", "window.browser", "client.nav" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 52,
+        "Text": "Which keyword refers to the current object?",
+        "Options": [ "this", "self", "current", "me" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 53,
+        "Text": "Which array method creates a new array by filtering elements?",
+        "Options": [ "map()", "filter()", "reduce()", "forEach()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 54,
+        "Text": "What does 'DOM' stand for?",
+        "Options": [ "Data Object Model", "Document Object Model", "Digital Object Management", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 55,
+        "Text": "What is the purpose of 'use strict'?",
+        "Options": [ "Enforce stricter parsing", "Make JS faster", "Secure the database", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 56,
+        "Text": "How do you check if an array includes a value?",
+        "Options": [ "contains()", "exists()", "includes()", "has()" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 57,
+        "Text": "Which event occurs when the user clicks on an HTML element?",
+        "Options": [ "onmouseclick", "onclick", "onchange", "onmouseover" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 58,
+        "Text": "What is the output of 'Boolean(0)'?",
+        "Options": [ "True", "False", "NaN", "Error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 59,
+        "Text": "How do you empty an array 'list'?",
+        "Options": [ "list = []", "list.length = 0", "list.splice(0)", "All of the above" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 60,
+        "Text": "What is the standard name for JavaScript?",
+        "Options": [ "Java", "ECMAScript", "JScript", "TypeScript" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+  {
+    "LanguageName": "TypeScript",
+    "Questions": [
+      {
+        "Id": 61,
+        "Text": "Which keyword is used for type checking in TS?",
+        "Options": [ "type", "interface", "typeof", "All of them" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 62,
+        "Text": "What is the 'any' type?",
+        "Options": [ "A type for numbers only", "A type that opts out of type checking", "A specific string type", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 63,
+        "Text": "How do you define an optional property in an interface?",
+        "Options": [ "property?", "property!", "optional property", "prop??" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 64,
+        "Text": "Which command compiles TS to JS?",
+        "Options": [ "npm start", "tsc", "node compile", "ts-build" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 65,
+        "Text": "What is a 'Tuple' in TypeScript?",
+        "Options": [ "A fixed-size array with specific types", "A type of class", "A module", "A loop" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 66,
+        "Text": "What is 'Enum' in TypeScript?",
+        "Options": [ "A way to define constants", "A way to define a collection of related values", "A loop", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 67,
+        "Text": "How do you define a type for an array of strings?",
+        "Options": [ "string[]", "Array<string>", "Both A and B", "list(string)" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 68,
+        "Text": "What does the 'unknown' type represent?",
+        "Options": [ "Same as any", "A type-safe sibling of any", "A null value", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 69,
+        "Text": "What is an 'Interface'?",
+        "Options": [ "A physical screen", "A way to define the shape of an object", "A type of class", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 70,
+        "Text": "What is 'Type Inference'?",
+        "Options": [ "TypeScript guessing the type based on the value", "Manually defining types", "An error in types", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 71,
+        "Text": "What is the 'void' type?",
+        "Options": [ "A type that contains everything", "Used for functions that do not return a value", "An empty string", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 72,
+        "Text": "What is a 'Union Type'?",
+        "Options": [ "A type that can be one of several types", "A type for databases", "A type of loop", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 73,
+        "Text": "How do you cast a variable to another type?",
+        "Options": [ "as <type>", "<type>variable", "Both A and B", "cast(<type>)" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 74,
+        "Text": "What is the 'readonly' keyword used for?",
+        "Options": [ "To make a property immutable", "To hide a property", "To speed up the app", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 75,
+        "Text": "What is the purpose of 'tsconfig.json'?",
+        "Options": [ "To manage dependencies", "To configure the TypeScript compiler options", "To style the app", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 76,
+        "Text": "What are 'Generics' in TypeScript?",
+        "Options": [ "General types", "Reusable components that work with a variety of types", "A type of loop", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 77,
+        "Text": "Which access modifier is the default in TS classes?",
+        "Options": [ "private", "protected", "public", "internal" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 78,
+        "Text": "What is 'Intersection Type'?",
+        "Options": [ "Combining multiple types into one", "Deleting a type", "A logic error", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 79,
+        "Text": "Can TypeScript be run directly in the browser?",
+        "Options": [ "Yes", "No, it must be compiled to JS first", "Only in Chrome", "Only in VS Code" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 80,
+        "Text": "What is the extension for TypeScript files?",
+        "Options": [ ".js", ".ts", ".tsx", "Both B and C" ],
+        "CorrectAnswer": "D"
+      }
+    ]
+  },
+  {
+    "LanguageName": "React",
+    "Questions": [
+      {
+        "Id": 81,
+        "Text": "What hook is used for state management?",
+        "Options": [ "useEffect", "useState", "useContext", "useRef" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 82,
+        "Text": "What is JSX?",
+        "Options": [ "A CSS framework", "JavaScript XML", "A Java extension", "A database" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 83,
+        "Text": "How do you pass data to a child component?",
+        "Options": [ "Via State", "Via Props", "Via API", "Via Redux only" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 84,
+        "Text": "What is the purpose of useEffect?",
+        "Options": [ "To handle side effects", "To style components", "To create routes", "To build the app" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 85,
+        "Text": "In React, what is a 'key' prop used for?",
+        "Options": [ "Styling", "Identifying unique list elements", "Accessing the DOM", "Security" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 86,
+        "Text": "What is the correct way to update state in React?",
+        "Options": [ "this.state = {}", "this.setState({})", "setState()", "Both B and C" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 87,
+        "Text": "What are 'fragments' used for?",
+        "Options": [ "To break the code", "To group elements without adding extra DOM nodes", "To style text", "To create routes" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 88,
+        "Text": "What is the 'Virtual DOM'?",
+        "Options": [ "A direct copy of the HTML", "A lightweight representation of the real DOM", "A database for React", "A browser plugin" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 89,
+        "Text": "Which hook is used to memoize expensive functions?",
+        "Options": [ "useMemo", "useCallback", "useEffect", "useRef" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 90,
+        "Text": "How do you handle events in React?",
+        "Options": [ "onclick={}", "onClick={}", "on-click={}", "click={}" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 91,
+        "Text": "What is 'Prop Drilling'?",
+        "Options": [ "A way to fetch data", "Passing data through many layers of components", "A styling technique", "Optimizing performance" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 92,
+        "Text": "Which hook provides access to the DOM element directly?",
+        "Options": [ "useState", "useRef", "useReducer", "useLayout" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 93,
+        "Text": "What is the purpose of 'Redux' in React applications?",
+        "Options": [ "Routing", "Global State Management", "API fetching", "Form validation" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 94,
+        "Text": "What is a 'Higher-Order Component' (HOC)?",
+        "Options": [ "A component with high priority", "A function that takes a component and returns a new one", "A component that uses many hooks", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 95,
+        "Text": "In React, what does 'Lifting State Up' mean?",
+        "Options": [ "Moving state to a parent component", "Moving state to a child component", "Deleting state", "Storing state in LocalStorage" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 96,
+        "Text": "Which lifecycle method is called after the component is rendered?",
+        "Options": [ "componentWillMount", "componentDidMount", "componentDidUpdate", "render()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 97,
+        "Text": "What is the default port for a React development server?",
+        "Options": [ "8080", "3000", "5000", "4200" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 98,
+        "Text": "What is 'Strict Mode' in React?",
+        "Options": [ "A tool for highlighting potential problems", "A way to make the app secure", "A private mode", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 99,
+        "Text": "How do you create a controlled input?",
+        "Options": [ "By using ref", "By binding its value to the state", "By using id", "Inputs are always controlled" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 100,
+        "Text": "What is the return type of a functional component?",
+        "Options": [ "String", "Object", "JSX/React Element", "Void" ],
+        "CorrectAnswer": "C"
+      }
+    ]
+  },
+  {
+    "LanguageName": "PHP",
+    "Questions": [
+      {
+        "Id": 101,
+        "Text": "What does PHP stand for?",
+        "Options": [ "Personal Home Page", "PHP: Hypertext Preprocessor", "Private HTTP Page", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 102,
+        "Text": "Which superglobal is used to collect form data after submitting an HTML form with method='post'?",
+        "Options": [ "$_GET", "$_REQUEST", "$_POST", "$_SERVER" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 103,
+        "Text": "How do you start a PHP variable?",
+        "Options": [ "&", "var", "$", "@" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 104,
+        "Text": "Which function is used to open a file in PHP?",
+        "Options": [ "fopen()", "open()", "file_open()", "read_file()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 105,
+        "Text": "What is the correct way to end a PHP statement?",
+        "Options": [ ".", "New line", ";", "</php>" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 106,
+        "Text": "Which function returns the number of elements in an array?",
+        "Options": [ "count()", "len()", "sizeof()", "Both A and C" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 107,
+        "Text": "How do you define a constant in PHP?",
+        "Options": [ "const", "define()", "constant()", "Both A and B" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 108,
+        "Text": "Which operator is used for string concatenation?",
+        "Options": [ "+", ".", "&", "concat" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 109,
+        "Text": "Which function is used to hash passwords securely?",
+        "Options": [ "md5()", "sha1()", "password_hash()", "crypt()" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 110,
+        "Text": "What is the default file extension for PHP files?",
+        "Options": [ ".html", ".php", ".ph", ".p" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 111,
+        "Text": "How do you start a session?",
+        "Options": [ "session_begin()", "start_session()", "session_start()", "init_session()" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 112,
+        "Text": "Which loop is designed specifically for arrays?",
+        "Options": [ "for", "while", "foreach", "do...while" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 113,
+        "Text": "Which superglobal holds information about headers and paths?",
+        "Options": [ "$_ENV", "$_SERVER", "$_GET", "$_GLOBALS" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 114,
+        "Text": "How do you create a function?",
+        "Options": [ "function name()", "def name()", "func name()", "new function name()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 115,
+        "Text": "What does 'echo' do?",
+        "Options": [ "Deletes a variable", "Outputs text to the screen", "Calls a database", "Returns a value" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 116,
+        "Text": "Which magic constant returns the current line number?",
+        "Options": [ "__FILE__", "__DIR__", "__LINE__", "__CLASS__" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 117,
+        "Text": "How do you include a file and stop execution if it's missing?",
+        "Options": [ "include", "require", "fetch", "get" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 118,
+        "Text": "What is the correct way to write an array in PHP?",
+        "Options": [ "$a = array(1,2)", "$a = [1,2]", "Both A and B", "None" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 119,
+        "Text": "Which variable is used to get cookies?",
+        "Options": [ "$_COOKIE", "$_GETCOOKIE", "$_SETCOOKIE", "$COOKIE" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 120,
+        "Text": "What is the scope of a variable declared outside a function?",
+        "Options": [ "Local", "Static", "Global", "Private" ],
+        "CorrectAnswer": "C"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Angular",
+    "Questions": [
+      {
+        "Id": 121,
+        "Text": "Which command is used to create a new Angular project?",
+        "Options": [ "ng new", "npm create-angular", "ng start", "angular-init" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 122,
+        "Text": "What decorator is used for a class to be a component?",
+        "Options": [ "@Injectable", "@Directive", "@Component", "@NgModule" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 123,
+        "Text": "Which directive is used for two-way data binding?",
+        "Options": [ "ngIf", "ngFor", "ngModel", "ngBind" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 124,
+        "Text": "What is the primary language used in Angular?",
+        "Options": [ "Python", "TypeScript", "PHP", "Java" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 125,
+        "Text": "What does 'SPA' stand for?",
+        "Options": [ "Single Page Application", "Simple Program Access", "Secure Page App", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 126,
+        "Text": "What is an 'Observable' in Angular?",
+        "Options": [ "A type of array", "A stream of data over time (RxJS)", "A UI component", "A debugging tool" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 127,
+        "Text": "Which file contains the configuration for the Angular CLI?",
+        "Options": [ "angular.json", "package.json", "app.module.ts", "main.ts" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 128,
+        "Text": "What is the purpose of 'Services' in Angular?",
+        "Options": [ "To style components", "To share logic and data across components", "To create routes", "To manage HTML templates" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 129,
+        "Text": "Which directive is used to repeat an HTML element?",
+        "Options": [ "*ngRepeat", "*ngFor", "*ngIf", "*ngSwitch" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 130,
+        "Text": "What is 'Dependency Injection'?",
+        "Options": [ "A way to inject CSS into HTML", "A design pattern to provide dependencies to classes", "A security flaw", "A type of database connection" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 131,
+        "Text": "Which pipe is used to format currency?",
+        "Options": [ "currencyPipe", "currency", "formatCurrency", "money" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 132,
+        "Text": "What is the role of 'AppRoutingModule'?",
+        "Options": [ "To handle API calls", "To define and manage application routes", "To style the app", "To bootstrap the application" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 133,
+        "Text": "What does the 'Async' pipe do?",
+        "Options": [ "Makes the app run faster", "Automatically subscribes to an Observable or Promise", "Delays the execution of a function", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 134,
+        "Text": "Which decorator is used for cross-component communication (Input)?",
+        "Options": [ "@Output", "@Input", "@Inject", "@ViewChild" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 135,
+        "Text": "What is the purpose of 'NgModule'?",
+        "Options": [ "To define a component", "To group related components, directives, and services", "To style the app", "To manage routes" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 136,
+        "Text": "How do you create a new component using CLI?",
+        "Options": [ "ng generate component name", "ng add component", "ng new component", "npm create component" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 137,
+        "Text": "What is 'Transpilation'?",
+        "Options": [ "Moving data between servers", "Converting TypeScript to JavaScript", "Compressing images", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 138,
+        "Text": "Which hook is called after component properties are initialized?",
+        "Options": [ "ngOnInit", "ngOnDestroy", "ngAfterViewInit", "ngOnChanges" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 139,
+        "Text": "What is 'Ivy' in Angular?",
+        "Options": [ "A CSS library", "A new compilation and rendering pipeline", "A testing framework", "A database" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 140,
+        "Text": "How do you perform property binding in Angular?",
+        "Options": [ "{{ property }}", "[property]=\"value\"", "(property)=\"value\"", "bind-property" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+
+  {
+    "LanguageName": "Vue.js",
+    "Questions": [
+      {
+        "Id": 141,
+        "Text": "How do you bind an attribute in Vue?",
+        "Options": [ "v-bind:href", "v-link", "v-attr", "bind" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 142,
+        "Text": "Which directive is used for conditional rendering?",
+        "Options": [ "v-show", "v-if", "Both A and B", "v-render" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 143,
+        "Text": "What is the extension of a Vue single-file component?",
+        "Options": [ ".js", ".html", ".vue", ".v" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 144,
+        "Text": "How do you listen to events in Vue?",
+        "Options": [ "v-on:click", "v-event", "v-listen", "@click" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 145,
+        "Text": "What is the Vue instance property for data?",
+        "Options": [ "state", "props", "data", "methods" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 146,
+        "Text": "What is the purpose of 'computed' properties?",
+        "Options": [ "To store raw data", "To perform logic and cache the result based on dependencies", "To create API calls", "To style the component" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 147,
+        "Text": "Which hook is called after the instance has been mounted?",
+        "Options": [ "created", "mounted", "updated", "destroyed" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 148,
+        "Text": "What is 'Vuex'?",
+        "Options": [ "A styling library", "A state management pattern and library", "A routing tool", "A testing framework" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 149,
+        "Text": "How do you pass data from parent to child?",
+        "Options": [ "$emit", "props", "inject", "slots" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 150,
+        "Text": "How do you send an event from child to parent?",
+        "Options": [ "props", "$emit", "provide", "commit" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 151,
+        "Text": "What is the 'v-model' directive used for?",
+        "Options": [ "One-way data binding", "Two-way data binding on form inputs", "To hide elements", "To loop through arrays" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 152,
+        "Text": "What does 'v-for' require to track identity?",
+        "Options": [ "a class", "a unique :key", "an id", "a ref" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 153,
+        "Text": "What is the 'Composition API'?",
+        "Options": [ "A way to write CSS", "A set of APIs to author components using imported functions", "A legacy Vue 1 feature", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 154,
+        "Text": "What is 'Vue Router'?",
+        "Options": [ "A server for Vue", "The official router for Vue.js", "A database manager", "A type of component" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 155,
+        "Text": "Which directive is used to render plain text?",
+        "Options": [ "v-html", "v-text", "v-bind", "v-string" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 156,
+        "Text": "What is the purpose of 'slots'?",
+        "Options": [ "To manage time", "To pass template content to components", "To define variable names", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 157,
+        "Text": "What is 'Vue CLI'?",
+        "Options": [ "A text editor", "A standard tool for Vue.js development", "A programming language", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 158,
+        "Text": "How do you watch for changes in a specific data property?",
+        "Options": [ "computed", "watch", "methods", "hooks" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 159,
+        "Text": "What is 'v-cloak' used for?",
+        "Options": [ "To hide elements until Vue is ready", "To animate elements", "To secure the app", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 160,
+        "Text": "What is the virtual DOM in Vue?",
+        "Options": [ "The actual HTML", "A memory representation of the DOM", "A CSS file", "None" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Node.js",
+    "Questions": [
+      {
+        "Id": 161,
+        "Text": "Which engine powers Node.js?",
+        "Options": [ "SpiderMonkey", "V8", "Chakra", "Gecko" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 162,
+        "Text": "What command initializes a package.json file?",
+        "Options": [ "npm init", "npm start", "node install", "npm install" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 163,
+        "Text": "Which module is used for file system operations?",
+        "Options": [ "http", "path", "fs", "os" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 164,
+        "Text": "How do you import a module using CommonJS?",
+        "Options": [ "import", "require()", "include", "fetch" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 165,
+        "Text": "Is Node.js multi-threaded or single-threaded?",
+        "Options": [ "Multi-threaded", "Single-threaded", "It depends on the CPU", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 166,
+        "Text": "What is the purpose of 'module.exports'?",
+        "Options": [ "To import a module", "To export functions/objects for use in other files", "To install a package", "To exit Node" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 167,
+        "Text": "Which tool is used to keep a Node app running after a crash?",
+        "Options": [ "NPM", "PM2", "V8", "Express" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 168,
+        "Text": "What does 'Event-Driven' architecture mean?",
+        "Options": [ "Code runs only on holidays", "Program flow is determined by events (clicks, messages)", "The server restarts often", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 169,
+        "Text": "Which command installs a package globally?",
+        "Options": [ "npm install -g <pkg>", "npm add global <pkg>", "npm save <pkg>", "node install <pkg>" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 170,
+        "Text": "What is 'middleware' in Express.js?",
+        "Options": [ "Database software", "Functions that execute during the request-response cycle", "A type of hardware", "A browser extension" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 171,
+        "Text": "How do you read environment variables?",
+        "Options": [ "env.get()", "process.env", "node.config", "variable.env" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 172,
+        "Text": "What is the 'Event Loop'?",
+        "Options": [ "A loop that counts events", "A mechanism that handles non-blocking I/O operations", "A UI component", "A type of error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 173,
+        "Text": "Which module provides utilities for working with file paths?",
+        "Options": [ "fs", "path", "url", "http" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 174,
+        "Text": "What is the 'npm' registry?",
+        "Options": [ "A database of developers", "A public repository of open-source packages", "A government agency", "A log file" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 175,
+        "Text": "How do you stop a Node.js process via code?",
+        "Options": [ "process.stop()", "process.exit()", "system.end()", "node.kill()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 176,
+        "Text": "What does 'callback hell' refer to?",
+        "Options": [ "Too many servers", "Deeply nested asynchronous callbacks", "A slow internet connection", "A compiler error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 177,
+        "Text": "Which function is used to convert an object to a buffer?",
+        "Options": [ "Buffer.from()", "Buffer.new()", "Object.toBuffer()", "parse()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 178,
+        "Text": "What is the default port for Express.js?",
+        "Options": [ "3000", "There is no default", "80", "8080" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 179,
+        "Text": "Which module is used to create an HTTP server?",
+        "Options": [ "server", "http", "net", "request" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 180,
+        "Text": "What is 'NVM'?",
+        "Options": [ "Node Variable Manager", "Node Version Manager", "New Virtual Machine", "None" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+  {
+    "LanguageName": "HTML",
+    "Questions": [
+      {
+        "Id": 181,
+        "Text": "Which tag is used to create a hyperlink?",
+        "Options": [ "<link>", "<a>", "<href>", "<url>" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 182,
+        "Text": "Which HTML element is used for the footer?",
+        "Options": [ "<bottom>", "<section>", "<footer>", "<end>" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 183,
+        "Text": "What is the correct tag for a line break?",
+        "Options": [ "<lb>", "<break>", "<br>", "<hr>" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 184,
+        "Text": "Which input type is used for a checkbox?",
+        "Options": [ "type='check'", "type='checkbox'", "type='box'", "type='boolean'" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 185,
+        "Text": "How do you make an ordered list?",
+        "Options": [ "<ul>", "<ol>", "<li>", "<list>" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 186,
+        "Text": "Which tag is used to display an image?",
+        "Options": [ "<pic>", "<img>", "<image>", "<src>" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 187,
+        "Text": "What is the purpose of the 'alt' attribute in <img>?",
+        "Options": [ "To style the image", "To provide alternative text if the image fails to load", "To link the image", "To set the height" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 188,
+        "Text": "Which tag is used for a table row?",
+        "Options": [ "<td>", "<th>", "<tr>", "<row>" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 189,
+        "Text": "How do you open a link in a new tab?",
+        "Options": [ "target='_blank'", "target='new'", "open='new'", "window='_blank'" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 190,
+        "Text": "Which HTML5 element is used for drawing graphics?",
+        "Options": [ "<svg>", "<canvas>", "Both A and B", "<paint>" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 191,
+        "Text": "What does the <meta> tag provide?",
+        "Options": [ "Metadata about the HTML document", "A link to CSS", "A visible title", "Encryption" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 192,
+        "Text": "Which tag is used to define a multi-line input?",
+        "Options": [ "<input type='text'>", "<textarea>", "<text>", "<input type='area'>" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 193,
+        "Text": "Which element is the container for all visible content?",
+        "Options": [ "<head>", "<html>", "<body>", "<main>" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 194,
+        "Text": "Which tag is used for the page title shown in the browser tab?",
+        "Options": [ "<head>", "<title>", "<meta>", "<h1>" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 195,
+        "Text": "How do you specify a background color in HTML (deprecated way)?",
+        "Options": [ "<body bgcolor='red'>", "<body color='red'>", "<body style='red'>", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 196,
+        "Text": "Which tag defines a navigation section?",
+        "Options": [ "<nav>", "<links>", "<menu>", "<header>" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 197,
+        "Text": "What is the correct tag for playing video?",
+        "Options": [ "<media>", "<video>", "<movie>", "<play>" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 198,
+        "Text": "Which attribute is used to uniquely identify an element?",
+        "Options": [ "class", "id", "name", "type" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 199,
+        "Text": "Which tag is used to define an unordered list?",
+        "Options": [ "<ol>", "<ul>", "<li>", "<list>" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 200,
+        "Text": "What does the <!DOCTYPE> declaration do?",
+        "Options": [ "Links CSS", "Informs the browser about the HTML version", "Defines the site language", "None" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+  {
+    "LanguageName": "CSS",
+    "Questions": [
+      {
+        "Id": 201,
+        "Text": "What does CSS stand for?",
+        "Options": [ "Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 202,
+        "Text": "Which property is used to change font size?",
+        "Options": [ "font-size", "text-size", "size", "font-style" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 203,
+        "Text": "How do you select an element with id 'header'?",
+        "Options": [ ".header", "header", "#header", "*header" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 204,
+        "Text": "What is the default value of the position property?",
+        "Options": [ "absolute", "fixed", "static", "relative" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 205,
+        "Text": "Which property controls the spacing between elements?",
+        "Options": [ "padding", "margin", "border", "gap" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 206,
+        "Text": "Which property is used to change the text color?",
+        "Options": [ "text-color", "color", "font-color", "fgcolor" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 207,
+        "Text": "How do you make the list items display horizontally?",
+        "Options": [ "display: block", "display: inline", "list-style: none", "horizontal: true" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 208,
+        "Text": "Which property is used to center text?",
+        "Options": [ "align: center", "text-align: center", "margin: auto", "text-center" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 209,
+        "Text": "What is the Z-index used for?",
+        "Options": [ "Zooming", "Stack order of elements", "Horizontal alignment", "Font weight" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 210,
+        "Text": "How do you add rounded corners to an element?",
+        "Options": [ "corner-radius", "border-radius", "border-round", "round-corner" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 211,
+        "Text": "Which unit is relative to the font-size of the element?",
+        "Options": [ "px", "em", "vh", "cm" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 212,
+        "Text": "What does 'Box-sizing: border-box' do?",
+        "Options": [ "Adds a border", "Includes padding and border in the element's total width/height", "Hides the box", "Makes the box a circle" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 213,
+        "Text": "How do you hide an element but keep its space in the layout?",
+        "Options": [ "display: none", "visibility: hidden", "opacity: 0", "Both B and C" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 214,
+        "Text": "Which property is used for Flexbox container alignment?",
+        "Options": [ "justify-content", "align-items", "Both A and B", "flex-center" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 215,
+        "Text": "How do you apply styles only for specific screen sizes?",
+        "Options": [ "@screen", "@media", "@responsive", "@mobile" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 216,
+        "Text": "Which property adds a shadow to text?",
+        "Options": [ "box-shadow", "text-shadow", "shadow-text", "font-shadow" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 217,
+        "Text": "What is the default value of 'overflow'?",
+        "Options": [ "hidden", "scroll", "visible", "auto" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 218,
+        "Text": "How do you make text uppercase?",
+        "Options": [ "text-transform: uppercase", "font-weight: bold", "text-style: capital", "case: upper" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 219,
+        "Text": "Which property is used to change the mouse cursor?",
+        "Options": [ "mouse", "cursor", "pointer", "icon" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 220,
+        "Text": "What does 'Cascading' in CSS mean?",
+        "Options": [ "Styles are applied in order of priority", "Colors are bright", "The code runs fast", "It works only on Chrome" ],
+        "CorrectAnswer": "A"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Kotlin",
+    "Questions": [
+      {
+        "Id": 241,
+        "Text": "How do you declare a read-only variable in Kotlin?",
+        "Options": [ "var", "val", "const", "let" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 242,
+        "Text": "What is the primary function to print to console?",
+        "Options": [ "printf()", "System.out.println()", "println()", "echo" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 243,
+        "Text": "What does the '?' operator do after a type (e.g., String?)?",
+        "Options": [ "It's an error", "It marks the type as nullable", "It makes the variable static", "It's a ternary operator" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 244,
+        "Text": "Which keyword is used to create a class?",
+        "Options": [ "class", "object", "type", "struct" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 245,
+        "Text": "How do you check for equality of values in Kotlin?",
+        "Options": [ "===", "==", "equals", "is" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 246,
+        "Text": "What is a 'Data Class' in Kotlin?",
+        "Options": [ "A class for storing data with auto-generated methods", "A class for database connections", "An abstract class", "A class that cannot have properties" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 247,
+        "Text": "Which keyword is used for string interpolation?",
+        "Options": [ "&", "$", "@", "#" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 248,
+        "Text": "What are 'Coroutines' used for?",
+        "Options": [ "UI Styling", "Asynchronous programming", "Object inheritance", "File compression" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 249,
+        "Text": "What is the 'Elvis Operator' in Kotlin?",
+        "Options": [ "!!", "?:", "?.", "==" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 250,
+        "Text": "How do you create a singleton in Kotlin?",
+        "Options": [ "static class", "object", "singleton class", "instanceof" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 251,
+        "Text": "What is the result of 'println(5 is Int)'?",
+        "Options": [ "5", "true", "false", "Error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 252,
+        "Text": "Which function is used to create a list that can be modified?",
+        "Options": [ "listOf()", "mutableListOf()", "array()", "fixedList()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 253,
+        "Text": "What does 'lateinit' do?",
+        "Options": [ "Delays variable initialization", "Makes a variable null", "Speeds up the app", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 254,
+        "Text": "Which keyword is used to extend a class?",
+        "Options": [ "extends", ":", "inherit", "implements" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 255,
+        "Text": "What is a 'Lambda' expression?",
+        "Options": [ "A mathematical symbol", "An anonymous function", "A type of loop", "A class name" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 256,
+        "Text": "How do you define a range in Kotlin?",
+        "Options": [ "1..10", "1 to 10", "1-10", "range(1,10)" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 257,
+        "Text": "What is 'Smart Cast'?",
+        "Options": [ "Automatic type conversion after a check", "A way to cast videos", "Manually casting types", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 258,
+        "Text": "Which function executes a block if the object is not null?",
+        "Options": [ "run", "let", "apply", "also" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 259,
+        "Text": "What is a 'Sealed Class'?",
+        "Options": [ "A class that cannot be opened", "A class with a restricted hierarchy", "A private class", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 260,
+        "Text": "Which scope is the default for Kotlin files?",
+        "Options": [ "private", "public", "internal", "protected" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Java",
+    "Questions": [
+      {
+        "Id": 261,
+        "Text": "Which keyword is used to inherit a class?",
+        "Options": [ "implements", "extends", "inherits", "import" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 262,
+        "Text": "What is the default value of a local variable?",
+        "Options": [ "0", "null", "Depends on type", "No default value" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 263,
+        "Text": "Which memory is used for storing objects?",
+        "Options": [ "Stack", "Heap", "Register", "Cache" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 264,
+        "Text": "What is the 'final' keyword used for?",
+        "Options": [ "To stop the program", "To make a variable constant", "To define a constructor", "To clean memory" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 265,
+        "Text": "Which interface is used to create a thread?",
+        "Options": [ "Runnable", "Threadable", "Executable", "Start" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 266,
+        "Text": "What is the difference between '==' and '.equals()' for Strings?",
+        "Options": [ "No difference", "== checks reference, .equals() checks content", "== checks content, .equals() checks reference", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 267,
+        "Text": "What is the default value of a boolean field?",
+        "Options": [ "true", "false", "null", "0" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 268,
+        "Text": "Which keyword is used to access parent class methods?",
+        "Options": [ "this", "parent", "super", "base" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 269,
+        "Text": "Which collection does not allow duplicate elements?",
+        "Options": [ "ArrayList", "LinkedList", "HashSet", "Vector" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 270,
+        "Text": "What is 'Abstraction'?",
+        "Options": [ "Hiding implementation details", "Showing all code", "Deleting unused code", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 271,
+        "Text": "What does the 'static' keyword mean?",
+        "Options": [ "Member belongs to the class, not an instance", "Member is constant", "Member is private", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 272,
+        "Text": "Which package contains the 'Scanner' class?",
+        "Options": [ "java.lang", "java.io", "java.util", "java.net" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 273,
+        "Text": "How do you handle multiple exceptions in one catch block (Java 7+)?",
+        "Options": [ "catch(E1, E2)", "catch(E1 | E2)", "catch(E1 & E2)", "Not possible" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 274,
+        "Text": "What is the 'this' keyword?",
+        "Options": [ "Refers to parent class", "Refers to current class instance", "Refers to static method", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 275,
+        "Text": "Which method is called before an object is garbage collected?",
+        "Options": [ "stop()", "finalize()", "delete()", "close()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 276,
+        "Text": "What is an 'Interface'?",
+        "Options": [ "A fully abstract class", "A concrete class", "A database", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 277,
+        "Text": "What is 'Overloading'?",
+        "Options": [ "Same method name, different parameters", "Same method name, same parameters", "Deleting a method", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 278,
+        "Text": "Which keyword is used for synchronizing threads?",
+        "Options": [ "lock", "synchronized", "threadsafe", "wait" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 279,
+        "Text": "What is the extension of a compiled Java file?",
+        "Options": [ ".java", ".class", ".exe", ".jar" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 280,
+        "Text": "Which loop is best for iterating over an array?",
+        "Options": [ "while", "for-each", "do-while", "infinite loop" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Swift",
+    "Questions": [
+      {
+        "Id": 281,
+        "Text": "What keyword is used to declare a constant in Swift?",
+        "Options": [ "var", "let", "const", "static" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 282,
+        "Text": "What is an 'Optional' in Swift?",
+        "Options": [ "A variable that can be null (nil)", "A setting in Xcode", "A type of loop", "A required parameter" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 283,
+        "Text": "How do you unwrap an optional safely?",
+        "Options": [ "if let", "guard let", "Both A and B", "!" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 284,
+        "Text": "Which collection type is ordered and allows duplicates?",
+        "Options": [ "Set", "Dictionary", "Array", "Tuple" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 285,
+        "Text": "What is the purpose of 'init' in a class?",
+        "Options": [ "To end the class", "To initialize properties", "To inherit", "To print data" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 286,
+        "Text": "How do you define a function in Swift?",
+        "Options": [ "func", "function", "def", "void" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 287,
+        "Text": "What is a 'Closure' in Swift?",
+        "Options": [ "A self-contained block of functionality", "A way to close the app", "A private variable", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 288,
+        "Text": "Which keyword is used to handle errors?",
+        "Options": [ "try", "do-catch", "throw", "All of the above" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 289,
+        "Text": "What is the 'nil-coalescing' operator?",
+        "Options": [ "?:", "??", "!?", "!!" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 290,
+        "Text": "What is a 'Struct' vs 'Class' in Swift?",
+        "Options": [ "Struct is value type, Class is reference type", "Class is value type, Struct is reference type", "No difference", "Structs cannot have methods" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 291,
+        "Text": "What does 'mutating' keyword do in a Struct?",
+        "Options": [ "Allows a method to modify properties", "Makes the struct static", "Deletes the struct", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 292,
+        "Text": "What is 'ARC' in Swift?",
+        "Options": [ "Automatic Reference Counting", "App Routing Center", "Apple Runtime Compiler", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 293,
+        "Text": "How do you declare a range from 1 to 5 including 5?",
+        "Options": [ "1...5", "1..<5", "1-5", "1 to 5" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 294,
+        "Text": "Which keyword is used to inherit from a protocol?",
+        "Options": [ "extends", "implements", ":", "using" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 295,
+        "Text": "What is a 'Guard' statement?",
+        "Options": [ "A loop", "An early exit from a function if condition is not met", "A security tool", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 296,
+        "Text": "What is 'Computed Property'?",
+        "Options": [ "A property that calculates its value", "A constant", "A private field", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 297,
+        "Text": "How do you perform a force unwrap?",
+        "Options": [ "?", "!", "!!", "??" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 298,
+        "Text": "What is an 'Extension'?",
+        "Options": [ "Adding functionality to existing types", "A browser plugin", "A type of subclass", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 299,
+        "Text": "What is 'Type Aliasing'?",
+        "Options": [ "Giving a new name to an existing type", "Changing types at runtime", "An error", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 300,
+        "Text": "Which keyword is used for asynchronous functions?",
+        "Options": [ "async", "await", "Both A and B", "defer" ],
+        "CorrectAnswer": "C"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Dart",
+    "Questions": [
+      {
+        "Id": 301,
+        "Text": "What is the entry point of every Dart program?",
+        "Options": [ "start()", "init()", "main()", "run()" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 302,
+        "Text": "Does Dart support multi-threading?",
+        "Options": [ "No, it's single-threaded with Isolates", "Yes, same as Java", "Only on web", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 303,
+        "Text": "Which keyword is used for a variable that must be assigned only once but can be determined at runtime?",
+        "Options": [ "const", "final", "static", "var" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 304,
+        "Text": "How do you denote a private variable in Dart?",
+        "Options": [ "private varName", "_varName", "@varName", "#varName" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 305,
+        "Text": "What is the result of '5 ~/ 2'?",
+        "Options": [ "2.5", "2", "3", "Error" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 306,
+        "Text": "What is 'Null Safety' in Dart?",
+        "Options": [ "Prevents null pointer exceptions at compile time", "Makes all variables null", "A security feature", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 307,
+        "Text": "How do you create a constructor in Dart?",
+        "Options": [ "ClassName()", "constructor()", "new()", "init()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 308,
+        "Text": "What are 'Fat Arrow' (=>) functions?",
+        "Options": [ "A way to define short, one-line functions", "A pointer", "An error", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 309,
+        "Text": "Which keyword is used to mix-in a class?",
+        "Options": [ "with", "extends", "implements", "mixin" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 310,
+        "Text": "What is a 'Future' in Dart?",
+        "Options": [ "A prediction of code", "A value that will be available later (async)", "A loop", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 311,
+        "Text": "What does 'dynamic' keyword mean?",
+        "Options": [ "Type is checked at runtime", "Variable is constant", "Variable is private", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 312,
+        "Text": "How do you handle multiple return values?",
+        "Options": [ "List", "Map", "Records (Dart 3+)", "All of the above" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 313,
+        "Text": "Which operator is used to call a method only if object is not null?",
+        "Options": [ "?.", "??", "..", "!" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 314,
+        "Text": "What is 'Cascade Notation' (..)?",
+        "Options": [ "A way to perform a sequence of operations on the same object", "A type of loop", "A math operator", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 315,
+        "Text": "What is a 'Stream'?",
+        "Options": [ "A single future value", "A sequence of asynchronous events", "A database table", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 316,
+        "Text": "Which keyword is used for a constant that is known at compile time?",
+        "Options": [ "final", "const", "static", "var" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 317,
+        "Text": "What is 'late' keyword used for?",
+        "Options": [ "Non-nullable variable that is initialized later", "A variable that is always null", "Making the app slow", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 318,
+        "Text": "How do you define a Map in Dart?",
+        "Options": [ "{key: value}", "[key: value]", "(key: value)", "Map.add()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 319,
+        "Text": "What is 'Isolate'?",
+        "Options": [ "A separate thread of execution", "A way to hide code", "A design pattern", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 320,
+        "Text": "What does 'yield' do?",
+        "Options": [ "Exits a function", "Produces a value in a Stream", "Wait for a future", "None" ],
+        "CorrectAnswer": "B"
+      }
+    ]
+  },
+  {
+    "LanguageName": "Flutter",
+    "Questions": [
+      {
+        "Id": 321,
+        "Text": "What language is Flutter based on?",
+        "Options": [ "Java", "Kotlin", "Dart", "Swift" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 322,
+        "Text": "Who developed Flutter?",
+        "Options": [ "Apple", "Microsoft", "Facebook", "Google" ],
+        "CorrectAnswer": "D"
+      },
+      {
+        "Id": 323,
+        "Text": "What is a 'Widget' in Flutter?",
+        "Options": [ "A database tool", "The basic building block of the UI", "A backend server", "A memory manager" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 324,
+        "Text": "What is the difference between StatelessWidget and StatefulWidget?",
+        "Options": [ "Stateless doesn't change, Stateful can", "Stateless is faster", "Stateful is for web only", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 325,
+        "Text": "What command is used to run a Flutter app?",
+        "Options": [ "flutter start", "flutter run", "flutter build", "flutter go" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 326,
+        "Text": "What is the 'pubspec.yaml' file used for?",
+        "Options": [ "Writing code", "Managing dependencies and assets", "Styling the app", "Database configuration" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 327,
+        "Text": "How do you create a list of items in Flutter?",
+        "Options": [ "ListView", "Column", "Row", "Stack" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 328,
+        "Text": "What is 'Hot Reload'?",
+        "Options": [ "Restarting the phone", "Updating code without restarting the app", "Clearing the cache", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 329,
+        "Text": "Which widget is used for a basic layout structure (AppBar, Body)?",
+        "Options": [ "Container", "Scaffold", "Column", "Box" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 330,
+        "Text": "What is 'MainAxisAlignment' used for?",
+        "Options": [ "Aligning items in a Row/Column", "Styling text", "Managing state", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 331,
+        "Text": "What is the purpose of 'setState()'?",
+        "Options": [ "To delete the app", "To trigger a rebuild of the UI with new data", "To save data to a file", "To call an API" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 332,
+        "Text": "How do you navigate to a new screen?",
+        "Options": [ "Navigator.push()", "Route.go()", "Screen.move()", "Window.open()" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 333,
+        "Text": "What is a 'Future' in Dart/Flutter?",
+        "Options": [ "A way to predict user input", "An object representing a delayed computation", "A permanent variable", "None" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 334,
+        "Text": "What is the 'Container' widget?",
+        "Options": [ "A widget for styling and positioning children", "A database container", "A type of loop", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 335,
+        "Text": "How do you add an image from assets?",
+        "Options": [ "Image.network()", "Image.asset()", "Image.file()", "Image.source()" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 336,
+        "Text": "Which widget provides a material design app bar?",
+        "Options": [ "Header", "AppBar", "TopNav", "Scaffold" ],
+        "CorrectAnswer": "B"
+      },
+      {
+        "Id": 337,
+        "Text": "What is 'InkWell'?",
+        "Options": [ "A widget that makes elements clickable with a ripple effect", "A drawing tool", "A text editor", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 338,
+        "Text": "How do you handle responsive layouts?",
+        "Options": [ "MediaQuery", "LayoutBuilder", "Both A and B", "CSS Media Queries" ],
+        "CorrectAnswer": "C"
+      },
+      {
+        "Id": 339,
+        "Text": "What is the 'main.dart' file?",
+        "Options": [ "The starting point of the application", "A style sheet", "A configuration file", "None" ],
+        "CorrectAnswer": "A"
+      },
+      {
+        "Id": 340,
+        "Text": "What is 'Provider' in Flutter?",
+        "Options": [ "A common state management solution", "An internet provider", "A hardware driver", "None" ],
+        "CorrectAnswer": "A"
+      }
+    ]
+  }
+]

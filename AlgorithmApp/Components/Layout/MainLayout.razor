@@ -1,0 +1,48 @@
+﻿@inherits LayoutComponentBase
+
+<main>
+    <button class="nav-toggle-btn">
+        <i class="bi bi-list"></i>
+    </button>
+    <div class="page">
+        <button class="nav-toggle-btn" @onclick="ToggleNav">
+            <i class="bi @(isNavOpen ? "bi-x-lg" : "bi-list")"></i>
+        </button>
+
+        <aside class="sidebar-glass @(isNavOpen ? "open" : "")">
+            <div class="sidebar-header">
+                <h3 class="fw-bold">القائمة</h3>
+            </div>
+
+            <nav class="sidebar-links">
+                <a href="/" @onclick="CloseNav" class="nav-item">
+                    <i class="bi bi-house-door"></i> الرئيسية
+                </a>
+                <a href="/roadmaps" @onclick="CloseNav" class="nav-item">
+                    <i class="bi bi-map"></i> الخطة التعليمية
+                </a>
+                <a href="/Snake" @onclick="CloseNav" class="nav-item snake-link">
+                    <i class="bi bi-controller"></i> لعبة الثعبان 🐍
+                </a>
+                <a href="/settings" @onclick="CloseNav" class="nav-item">
+                    <i class="bi bi-gear"></i> الإعدادات
+                </a>
+            </nav>
+        </aside>
+
+        <main>
+            @Body
+        </main>
+    </div>
+
+    @code {
+        private bool isNavOpen = false;
+        private void ToggleNav() => isNavOpen = !isNavOpen;
+        private void CloseNav() => isNavOpen = false;
+    }
+    <div class="chat-fab">
+        <i class="bi bi-robot"></i>
+        <span class="online-indicator"></span>
+    </div>
+    @Body
+</main>

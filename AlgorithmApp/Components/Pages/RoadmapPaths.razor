@@ -1,0 +1,28 @@
+﻿@page "/roadmaps/{CategoryId}"
+
+<div class="main-bg">
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2 class="fw-bold">مسارات @CategoryId.ToUpper()</h2>
+            <a href="/roadmaps" class="btn btn-outline-light btn-sm">العودة للمجالات</a>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var path in Paths)
+            {
+                <div class="col-md-6">
+                    <div class="roadmap-card">
+                        <h3 class="text-info">مسار @path</h3>
+                        <p class="opacity-50">تعلم بناء تطبيقات احترافية باستخدام @path</p>
+                        <a href="/roadmaps/@CategoryId/@path" class="btn btn-sm btn-primary mt-3">عرض الخريطة</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string CategoryId { get; set; }
+    string[] Paths = { "C# (.NET)", "Node.js", "Python (Django)", "PHP (Laravel)" };
+}

@@ -1,0 +1,104 @@
+﻿/* تنسيق العنوان الرئيسي بتدرج لوني */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.3));
+}
+
+/* الكروت الزجاجية للغات */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    height: 100%;
+}
+
+    .glass-card:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-10px);
+        border-color: #00f2fe;
+        box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+    }
+
+    .glass-card i {
+        transition: transform 0.3s;
+    }
+
+    .glass-card:hover i {
+        transform: scale(1.2);
+    }
+
+/* زر الشات بوت */
+.chat-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+    .chat-fab:hover {
+        transform: scale(1.1) rotate(10deg);
+    }
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+.bg-warning-gradient {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    box-shadow: 0 5px 15px rgba(253, 160, 133, 0.3);
+}
+
+.section-header {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* تحسين الكروت */
+.glass-card .badge {
+    transition: 0.3s;
+}
+
+.glass-card:hover .badge {
+    transform: scale(1.1);
+}
+
+/* في حال لم توجد صور للغات، نستخدم الأيقونات */
+.lang-icon {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+}

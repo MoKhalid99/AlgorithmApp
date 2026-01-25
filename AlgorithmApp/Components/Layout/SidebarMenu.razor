@@ -1,0 +1,35 @@
+﻿@inject NavigationManager Nav
+
+<div class="sidebar @(IsOpen ? "open" : "")">
+    <button class="btn btn-link text-white" @onclick="CloseMenu" style="position: absolute; top: 10px; left: 10px;">X</button>
+
+    <div class="text-center mb-4">
+        <h3>Algorithm</h3>
+    </div>
+
+    <nav class="d-flex flex-column">
+        <NavLink class="nav-link" href="/">🏠 الرئيسية</NavLink>
+        <NavLink class="nav-link" href="/roadmaps">🗺️ خرائط التعلم</NavLink>
+        <NavLink class="nav-link" href="/snake">🐍 لعبة الثعبان</NavLink>
+    </nav>
+</div>
+
+<div class="fab" @onclick="ToggleChat">
+    🤖
+</div>
+
+@code {
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public EventCallback<bool> IsOpenChanged { get; set; }
+
+    private async Task CloseMenu()
+    {
+        IsOpen = false;
+        await IsOpenChanged.InvokeAsync(IsOpen);
+    }
+
+    private void ToggleChat()
+    {
+        // منطق الشات بوت هنا
+    }
+}
