@@ -1,9 +1,12 @@
-﻿using AlgorithmApp.Components;
+using AlgorithmApp.Components;
 using AlgorithmApp.Services;
+using Microsoft.AspNetCore.Components;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// إضافة خدمات Blazor مع التمكين التفاعلي للسيرفر
+builder.Services.AddScoped(sp => new HttpClient
+{
+	BaseAddress = new Uri(sp.GetRequiredService<NavigationManager>().BaseUri)
+});
 builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents();
 
@@ -20,7 +23,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// ميزة .NET 9 للتعامل الذكي مع ملفات CSS و JS
 app.MapStaticAssets();
 
 app.UseAntiforgery();
