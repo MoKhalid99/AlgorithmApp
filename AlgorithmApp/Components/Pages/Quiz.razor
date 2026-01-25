@@ -1,55 +1,61 @@
-﻿@page "/quiz/{Language}"
+@page "/quiz/{Language}"
 @inject AlgorithmApp.Services.QuizService QuizService
 @inject NavigationManager NavManager
 @rendermode InteractiveServer
 @using System.Timers
 @implements IDisposable
 
-<div class="quiz-container">
-    <div class="stars-overlay"></div>
-    
-    <div class="container py-4 position-relative">
+<div class="quiz-page">
+    <div class="overlay-bg"></div>
+
+    <div class="container py-5 content-wrapper">
         @if (questions != null && currentIndex < questions.Count && !isFinished)
         {
-            <div class="quiz-nav-info d-flex justify-content-between align-items-center mb-4">
-                <div class="glass-pill">
-                    <span class="text-white-50 small d-block">السؤال</span>
-                    <span class="fw-bold">@(currentIndex + 1) / @questions.Count</span>
+            <div class="quiz-header mb-4">
+                <div class="glass-badge">
+                    <span class="label">السؤال</span>
+                    <span class="value">@(currentIndex + 1) <span class="text-white-50">/ @questions.Count</span></span>
                 </div>
 
-                <div class="timer-display @(timeLeft < 10 ? "critical" : "")">
-                    <div class="timer-ring"></div>
-                    <span class="timer-text">@timeLeft</span>
+                <div class="timer-container @(timeLeft <= 10 ? "pulse-danger" : "")">
+                    <div class="timer-ring">
+                        <svg class="progress-ring" width="60" height="60">
+                            <circle class="progress-ring__circle" stroke="white" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" />
+                        </svg>
+                        <span class="timer-text">@timeLeft</span>
+                    </div>
                 </div>
 
-                <div class="glass-pill">
-                    <span class="text-white-50 small d-block">السكور</span>
-                    <span class="fw-bold text-warning">@(score * 10)</span>
+                <div class="glass-badge">
+                    <span class="label">النقاط</span>
+                    <span class="value text-warning">@(score * 10)</span>
                 </div>
             </div>
 
-            <div class="code-card-glass mb-4 animate__animated animate__fadeInUp">
-                <div class="card-header-dots">
-                    <div class="dots-group">
+            <div class="question-card glass-panel mb-4 animate__animated animate__fadeInUp">
+                <div class="card-bar">
+                    <div class="window-controls">
                         <span class="dot red"></span>
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
                     </div>
-                    <div class="lang-title">@(Language == "CSharp" ? "C#" : Language) Console</div>
+                    <div class="lang-label">
+                        <i class="bi bi-code-slash"></i> @(Language == "CSharp" ? "C#" : Language) Snippet
+                    </div>
                 </div>
-                
-                <div class="card-content p-4">
+
+                <div class="card-body-content">
                     @if (!string.IsNullOrEmpty(questions[currentIndex].CodeSnippet))
                     {
-                        <div class="code-wrapper mb-4">
+                        <div class="code-block">
                             <pre><code>@questions[currentIndex].CodeSnippet</code></pre>
                         </div>
                     }
-                    <h2 class="question-title text-end">@questions[currentIndex].Text</h2>
+                    <h3 class="question-text">@questions[currentIndex].Text</h3>
                 </div>
             </div>
 
-            <div class="row g-3">
+            <div class="options-grid">
                 @for (int i = 0; i < questions[currentIndex].Options.Count; i++)
                 {
                     var opt = questions[currentIndex].Options[i];
@@ -57,58 +63,196 @@
                     char letter = (char)('A' + i);
                     string letterStr = letter.ToString();
 
-                    string feedbackClass = "";
+                    // منطق الألوان (أخضر للصحيح، أحمر للخطأ)
+                    string stateClass = "";
                     if (showFeedback)
                     {
                         if (letterStr == questions[currentIndex].CorrectAnswer)
-                            feedbackClass = "correct-choice";
+                            stateClass = "correct";
                         else if (letterStr == selectedLetter)
-                            feedbackClass = "wrong-choice";
+                            stateClass = "wrong";
                         else
-                            feedbackClass = "muted-choice";
+                            stateClass = "dimmed";
                     }
 
-                    <div class="col-md-6">
-                        <button class="answer-btn @feedbackClass" @onclick="() => HandleAnswer(index)" disabled="@showFeedback">
-                            <span class="letter-tag">@letter</span>
-                            <span class="option-text">@opt</span>
-                        </button>
-                    </div>
+                    <button class="option-btn glass-panel @stateClass"
+                            @onclick="() => HandleAnswer(index)"
+                            disabled="@showFeedback">
+                        <span class="letter-box">@letter</span>
+                        <span class="opt-text">@opt</span>
+
+                        @if (stateClass == "correct")
+                        {
+                            <i class="bi bi-check-circle-fill status-icon"></i>
+                        }
+                        else if (stateClass == "wrong")
+                        {
+                            <i class="bi bi-x-circle-fill status-icon"></i>
+                        }
+                    </button>
                 }
             </div>
         }
         else if (isFinished)
         {
-            <div class="result-glass text-center p-5 animate__animated animate__zoomIn">
-                <div class="trophy-icon mb-3">🏆</div>
-                <h2 class="text-white fw-bold">تهانينا!</h2>
-                <div class="final-score-circle">
-                    <span class="num">@score</span>
-                    <span class="total">/@questions.Count</span>
+            <div class="result-card glass-panel text-center animate__animated animate__zoomIn">
+                <div class="trophy-container">
+                    <i class="bi bi-trophy-fill trophy-icon"></i>
                 </div>
-                <p class="text-white-50 mt-3">لقد حصلت على @(score * 10) نقطة</p>
-                <div class="d-grid gap-2 mt-4">
-                    <button class="btn btn-primary btn-lg rounded-pill shadow-lg" @onclick="Restart">إعادة التحدي</button>
-                    <a href="/" class="btn btn-outline-light btn-lg rounded-pill">الرئيسية</a>
+                <h2 class="text-white fw-bold mb-2">أداء رائع!</h2>
+                <div class="final-score-box">
+                    <span class="score-num">@score</span>
+                    <span class="score-total">/ @questions.Count</span>
                 </div>
+                <p class="text-white-50 mb-4">مجموع النقاط: <span class="text-warning fw-bold">@(score * 10)</span></p>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary btn-lg rounded-pill px-5" @onclick="Restart">إعادة المحاولة</button>
+                    <a href="/" class="btn btn-outline-light btn-lg rounded-pill px-5 mt-2">الرئيسية</a>
+                </div>
+            </div>
+        }
+        else if (hasError)
+        {
+            <div class="alert alert-danger text-center glass-panel">
+                لم يتم العثور على أسئلة لغة @Language
+                <br />
+                <a href="/" class="btn btn-sm btn-light mt-3">عودة</a>
+            </div>
+        }
+        else
+        {
+            <div class="loading-spinner text-center text-white mt-5">
+                <div class="spinner-border text-info" role="status"></div>
+                <p class="mt-2">جاري تجهيز التحدي...</p>
             </div>
         }
     </div>
 </div>
 
+<style>
+    /* 1. إصلاح الخلفية لتغطي الشاشة بالكامل */
+    .quiz-page {
+        background: radial-gradient(circle at top, #1e1333 0%, #080808 100%);
+        min-height: 100vh;
+        width: 100%;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+        padding-bottom: 50px;
+    }
+
+    /* 2. إصلاح شريط النافذة (أهم جزء) */
+    .glass-panel {
+        background: rgba(30, 30, 30, 0.6); /* لون داكن شفاف */
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        margin-bottom: 20px;
+    }
+
+    .card-bar {
+        background: #252526; /* لون شريط VS Code */
+        padding: 10px 15px;
+        display: flex;          /* هذا ما يجعل العناصر أفقية */
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #333;
+    }
+
+    /* إصلاح ترتيب النقاط */
+    .window-controls {
+        display: flex;
+        gap: 8px; /* مسافة بين النقاط */
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .red { background: #ff5f56; }
+    .yellow { background: #ffbd2e; }
+    .green { background: #27c93f; }
+
+    .lang-label {
+        color: #cccccc;
+        font-size: 0.9rem;
+        font-family: Consolas, monospace;
+    }
+
+    /* 3. تنسيق الكود */
+    .code-block {
+        background: #1e1e1e; /* خلفية الكود الداكنة */
+        padding: 20px;
+        margin: 0;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    pre { margin: 0; white-space: pre-wrap; color: #d4d4d4; font-family: Consolas, monospace; }
+
+    /* 4. تنسيق السؤال والأزرار */
+    .card-body-content { padding: 20px; }
+    .question-text { text-align: right; margin-bottom: 0; font-weight: 600; }
+
+    .option-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        width: 100%;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row-reverse; /* للعربية */
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.2s;
+    }
+
+    .option-btn:hover:not(:disabled) {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #0078d4;
+    }
+
+    /* حالات الألوان */
+    .correct { background: rgba(40, 167, 69, 0.3) !important; border-color: #28a745 !important; }
+    .wrong { background: rgba(220, 53, 69, 0.3) !important; border-color: #dc3545 !important; }
+
+    /* العداد والسكور */
+    .quiz-header { display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center;}
+    .glass-badge { background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 20px; }
+</style>
+
 @code {
     [Parameter] public string Language { get; set; }
     private List<Data.Question> questions;
     private int currentIndex = 0, score = 0, timeLeft = 30;
-    private bool isFinished = false, showFeedback = false;
+    private bool isFinished = false, showFeedback = false, hasError = false;
     private string selectedLetter = "";
     private Timer timer;
 
     protected override async Task OnInitializedAsync()
     {
-        string key = Language == "CSharp" ? "C#" : Language;
-        questions = await QuizService.GetRandomQuestionsAsync(key);
-        StartTimer();
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        try
+        {
+            // إصلاح مشكلة C#
+            string searchKey = Language == "CSharp" ? "C#" : Language;
+            questions = await QuizService.GetRandomQuestionsAsync(searchKey);
+
+            if (questions == null || questions.Count == 0) hasError = true;
+            else StartTimer();
+        }
+        catch { hasError = true; }
     }
 
     private void StartTimer()
@@ -116,9 +260,17 @@
         StopTimer();
         timeLeft = 30;
         timer = new Timer(1000);
-        timer.Elapsed += async (s, e) => {
-            if (timeLeft > 0) { timeLeft--; await InvokeAsync(StateHasChanged); }
-            else await InvokeAsync(() => HandleAnswer(-1));
+        timer.Elapsed += async (s, e) =>
+        {
+            if (timeLeft > 0)
+            {
+                timeLeft--;
+                await InvokeAsync(StateHasChanged);
+            }
+            else
+            {
+                await InvokeAsync(() => HandleAnswer(-1)); // انتهى الوقت
+            }
         };
         timer.Start();
     }
@@ -131,12 +283,16 @@
 
         if (index != -1)
         {
+            // إصلاح السكور: نحول الرقم لحرف ونقارنه
             selectedLetter = ((char)('A' + index)).ToString();
-            if (selectedLetter == questions[currentIndex].CorrectAnswer) score++;
+            if (selectedLetter == questions[currentIndex].CorrectAnswer)
+            {
+                score++;
+            }
         }
 
         StateHasChanged();
-        await Task.Delay(2000); 
+        await Task.Delay(2000); // انتظار لرؤية الألوان
 
         showFeedback = false;
         selectedLetter = "";
