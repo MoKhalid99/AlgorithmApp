@@ -131,8 +131,7 @@
 </div>
 
 <style>
-    /* 1. إصلاح الخلفية لتغطي الشاشة بالكامل */
-    .quiz-page {
+        .quiz-page {
         background: radial-gradient(circle at top, #1e1333 0%, #080808 100%);
         min-height: 100vh;
         width: 100%;
@@ -142,8 +141,7 @@
         padding-bottom: 50px;
     }
 
-    /* 2. إصلاح شريط النافذة (أهم جزء) */
-    .glass-panel {
+        .glass-panel {
         background: rgba(30, 30, 30, 0.6); /* لون داكن شفاف */
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -154,7 +152,7 @@
     }
 
     .card-bar {
-        background: #252526; /* لون شريط VS Code */
+        background: #252526;
         padding: 10px 15px;
         display: flex;          /* هذا ما يجعل العناصر أفقية */
         justify-content: space-between;
@@ -162,7 +160,7 @@
         border-bottom: 1px solid #333;
     }
 
-    /* إصلاح ترتيب النقاط */
+    /*  ترتيب النقاط */
     .window-controls {
         display: flex;
         gap: 8px; /* مسافة بين النقاط */
@@ -184,7 +182,7 @@
         font-family: Consolas, monospace;
     }
 
-    /* 3. تنسيق الكود */
+    /* تنسيق الكود */
     .code-block {
         background: #1e1e1e; /* خلفية الكود الداكنة */
         padding: 20px;
@@ -195,7 +193,7 @@
 
     pre { margin: 0; white-space: pre-wrap; color: #d4d4d4; font-family: Consolas, monospace; }
 
-    /* 4. تنسيق السؤال والأزرار */
+    /* تنسيق السؤال والأزرار */
     .card-body-content { padding: 20px; }
     .question-text { text-align: right; margin-bottom: 0; font-weight: 600; }
 
