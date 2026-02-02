@@ -1,14 +1,17 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
+@inject NavigationManager Nav
+@using Microsoft.AspNetCore.Components.Routing
+
+<NavigationLock OnBeforeInternalNavigation="HandleNavigation" ConfirmExternalNavigation="false" />
 
 <main>
-    <button class="nav-toggle-btn">
-        <i class="bi bi-list"></i>
-    </button>
-    <div class="page">
-        <button class="nav-toggle-btn" @onclick="ToggleNav">
-            <i class="bi @(isNavOpen ? "bi-x-lg" : "bi-list")"></i>
-        </button>
+    <InfoTransition @ref="transitionScreen" OnProceed="ResumeNavigation" />
 
+    <button class="nav-toggle-btn" @onclick="ToggleNav">
+        <i class="bi @(isNavOpen ? "bi-x-lg" : "bi-list")"></i>
+    </button>
+
+    <div class="page">
         <aside class="sidebar-glass @(isNavOpen ? "open" : "")">
             <div class="sidebar-header">
                 <h3 class="fw-bold">القائمة</h3>
@@ -27,16 +30,53 @@
             </nav>
         </aside>
 
+        <div class="content-area">
+            @Body
+        </div>
     </div>
 
-    @code {
-        private bool isNavOpen = false;
-        private void ToggleNav() => isNavOpen = !isNavOpen;
-        private void CloseNav() => isNavOpen = false;
-    }
     <div class="chat-fab">
         <i class="bi bi-robot"></i>
         <span class="online-indicator"></span>
     </div>
-    @Body
 </main>
+
+@code {
+    private bool isNavOpen = false;
+    private InfoTransition transitionScreen; // مرجع لشاشة المعلومات
+    private string? targetUrl; // لتخزين الرابط المراد الذهاب إليه
+    private bool isProgrammaticNav = false; // لمنع التكرار اللانهائي
+
+    private void ToggleNav() => isNavOpen = !isNavOpen;
+    private void CloseNav() => isNavOpen = false;
+
+    // دالة اعتراض التنقل
+    private void HandleNavigation(LocationChangingContext context)
+    {
+        if (isProgrammaticNav)
+        {
+            isProgrammaticNav = false;
+            return;
+        }
+
+        // إيقاف الانتقال الفوري
+        context.PreventNavigation();
+
+        // حفظ الوجهة المطلوبة
+        targetUrl = context.TargetLocation;
+
+        // إظهار شاشة المعلومات
+        transitionScreen.Show();
+    }
+
+    // دالة المتابعة
+    private void ResumeNavigation()
+    {
+        if (targetUrl is not null)
+        {
+            transitionScreen.Hide(); // إخفاء الشاشة
+            isProgrammaticNav = true; // السماح بالمرور
+            Nav.NavigateTo(targetUrl); // الذهاب للرابط
+        }
+    }
+}
