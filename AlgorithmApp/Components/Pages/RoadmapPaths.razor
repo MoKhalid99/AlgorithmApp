@@ -1,20 +1,20 @@
-﻿@page "/roadmaps/{CategoryId}"
+@page "/roadmaps/{CategoryId}"
 
 <div class="main-bg">
     <div class="container py-5">
         <div class="d-flex justify-content-between align-items-center mb-5">
-            <h2 class="fw-bold">مسارات @CategoryId.ToUpper()</h2>
+            <h2 class="fw-bold">مسارات @GetCategoryName()</h2>
             <a href="/roadmaps" class="btn btn-outline-light btn-sm">العودة للمجالات</a>
         </div>
 
         <div class="row g-4">
-            @foreach (var path in Paths)
+            @foreach (var path in GetPaths())
             {
                 <div class="col-md-6">
-                    <div class="roadmap-card">
-                        <h3 class="text-info">مسار @path</h3>
-                        <p class="opacity-50">تعلم بناء تطبيقات احترافية باستخدام @path</p>
-                        <a href="/roadmaps/@CategoryId/@path" class="btn btn-sm btn-primary mt-3">عرض الخريطة</a>
+                    <div class="roadmap-card animate__animated animate__fadeInUp">
+                        <h3 class="text-info">@path.Name</h3>
+                        <p class="opacity-50">@path.Desc</p>
+                        <a href="/roadmaps/@CategoryId/@path.Name" class="btn btn-sm btn-primary mt-3">عرض الخريطة</a>
                     </div>
                 </div>
             }
@@ -24,5 +24,48 @@
 
 @code {
     [Parameter] public string CategoryId { get; set; }
-    string[] Paths = { "C# (.NET)", "Node.js", "Python (Django)", "PHP (Laravel)" };
+
+    // تعريف لبيانات المسار
+    record PathItem(string Name, string Desc);
+
+    // دالة لجلب الاسم للقسم
+    private string GetCategoryName()
+    {
+        return CategoryId.ToLower() switch
+        {
+            "frontend" => "تطوير الواجهات الأمامية",
+            "backend" => "تطوير الواجهات الخلفية",
+            "mobile" => "تطوير تطبيقات الموبايل",
+            "ai" => "الذكاء الاصطناعي",
+            "cybersecurity" => "الأمن السيبراني",
+            _ => CategoryId
+        };
+    }
+
+    // دالة لجلب المسارات الخاصة بكل قسم
+    private List<PathItem> GetPaths()
+    {
+        return CategoryId.ToLower() switch
+        {
+            "frontend" => new List<PathItem>
+            {
+                new("React", "المكتبة الأكثر شهرة لبناء واجهات تفاعلية من فيسبوك"),
+                new("Angular", "إطار عمل شامل وقوي من جوجل للمشاريع الضخمة"),
+                new("Vue.js", "إطار عمل خفيف وسهل التعلم يجمع بين مزايا React و Angular")
+            },
+            "backend" => new List<PathItem>
+            {
+                new(".NET", "بيئة عمل قوية من مايكروسوفت لبناء أنظمة آمنة وسريعة"),
+                new("Node.js", "بيئة تشغيل جافاسكريبت خارج المتصفح للسيرفرات"),
+                new("Python (Django)", "إطار عمل بايثون القوي للتطوير السريع والآمن"),
+                new("PHP (Laravel)", "الإطار الأكثر شهرة لتطوير الويب بلغة PHP")
+            },
+            "mobile" => new List<PathItem>
+            {
+                new("Flutter", "تطوير تطبيقات للأندرويد والآيفون بكود واحد باستخدام Dart"),
+                new("React Native", "استخدم مهاراتك في React لبناء تطبيقات موبايل")
+            },
+            _ => new List<PathItem>() // قائمة فارغة في حال لم يوجد قسم
+        };
+    }
 }
