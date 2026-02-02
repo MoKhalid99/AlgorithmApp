@@ -1,24 +1,28 @@
-﻿@page "/roadmaps/{CategoryId}/{PathName}"
+@page "/roadmaps/{CategoryId}/{PathName}"
 
 <div class="main-bg">
     <div class="container py-5 text-center">
-        <h1 class="display-5 fw-bold mb-5">مسار @PathName</h1>
+        <h1 class="display-5 fw-bold mb-5 animate__animated animate__zoomIn">مسار تعلم @PathName</h1>
 
         <div class="position-relative">
             <div class="roadmap-line"></div>
-            @foreach (var step in Steps)
+            @foreach (var step in GetSteps())
             {
-                <div class="step-box shadow-lg">
+                <div class="step-box shadow-lg animate__animated animate__fadeInUp">
                     <h5 class="fw-bold mb-1">@step.Title</h5>
                     <p class="small mb-0 opacity-75">@step.Desc</p>
                 </div>
             }
         </div>
 
-        <div class="mt-5">
+        <div class="mt-5 animate__animated animate__bounceIn">
             <div class="p-3 px-5 border border-success text-success rounded-pill d-inline-block fw-bold bg-dark">
                 أنت الآن جاهز لسوق العمل <i class="bi bi-check-circle-fill"></i>
             </div>
+        </div>
+
+        <div class="mt-4">
+            <a href="/roadmaps/@CategoryId" class="btn btn-outline-light rounded-pill px-4">عودة للقائمة السابقة</a>
         </div>
     </div>
 </div>
@@ -28,11 +32,74 @@
     [Parameter] public string PathName { get; set; }
 
     record Step(string Title, string Desc);
-    List<Step> Steps = new() {
-        new("C# Basics", "الأساسيات، المصفوفات، الدوال"),
-        new(".NET Core", "فهم إطار العمل الحديث"),
-        new("ASP.NET Web API", "بناء الخدمات الخلفية"),
-        new("Entity Framework", "إدارة قواعد البيانات"),
-        new("SQL Server", "التعامل مع Microsoft SQL")
-    };
+
+    private List<Step> GetSteps()
+    {
+        return PathName.ToLower() switch
+        {
+            // مسارات Frontend
+            "react" => new List<Step> {
+                new("HTML & CSS", "إتقان هيكلة الصفحات وتنسيقها وتصميم Responsive"),
+                new("JavaScript Basics", "المتغيرات، المصفوفات، الدوال، والتعامل مع DOM"),
+                new("ES6+ Features", "Arrow Functions, Destructuring, Modules, Promises"),
+                new("React Basics", "Components, JSX, Props, State"),
+                new("React Hooks", "useState, useEffect, useContext, useRef"),
+                new("State Management", "Redux Toolkit أو Context API"),
+                new("Routing & API", "React Router والتعامل مع RESTful APIs")
+            },
+            "angular" => new List<Step> {
+                new("TypeScript", "أساسيات اللغة والأنواع Types والـ Interfaces"),
+                new("Angular CLI", "طريقة إنشاء المشاريع وإدارتها"),
+                new("Components & Templates", "Binding, Directives, Pipes"),
+                new("Services & DI", "Dependency Injection وكيفية مشاركة البيانات"),
+                new("RxJS", "التعامل مع البيانات المتدفقة Observables"),
+                new("Routing & Forms", "إدارة الصفحات والنماذج التفاعلية")
+            },
+
+            // مسارات Backend
+            ".net" => new List<Step> {
+                new("C# Basics", "المتغيرات، الشروط، الحلقات التكرارية"),
+                new("OOP Concepts", "Classes, Inheritance, Polymorphism, Interfaces"),
+                new("Advanced C#", "Delegates, Events, Lambda, LINQ, Async/Await"),
+                new("SQL Server", "تصميم قواعد البيانات، T-SQL، Stored Procedures"),
+                new("Entity Framework Core", "التعامل مع قاعدة البيانات بأسلوب Code-First"),
+                new("ASP.NET Core Web API", "بناء REST APIs، Controllers، Routing"),
+                new("Authentication (JWT)", "تأمين التطبيق وإدارة المستخدمين"),
+                new("Clean Architecture", "تنظيم المشروع بشكل احترافي")
+            },
+            "node.js" => new List<Step> {
+                new("JavaScript Advanced", "Event Loop, Callbacks, Promises, Async/Await"),
+                new("Node.js Basics", "Modules, File System, HTTP Module"),
+                new("Express.js", "Middleware, Routing, Error Handling"),
+                new("MongoDB & Mongoose", "قواعد البيانات NoSQL والتعامل معها"),
+                new("Authentication", "JWT, Passport.js, Hashing Passwords"),
+                new("Real-time (Socket.io)", "بناء تطبيقات المحادثة الفورية")
+            },
+            "python (django)" => new List<Step> {
+                new("Python Basics", "النحو الأساسي للغة وهياكل البيانات"),
+                new("OOP in Python", "Classes, Objects, Inheritance"),
+                new("Django Setup", "MVT Architecture, Project Structure"),
+                new("Models & Migrations", "تصميم الجداول والعلاقات"),
+                new("Django Views & URLs", "معالجة الطلبات وتوجيه الروابط"),
+                new("Django Templates", "عرض البيانات في واجهات HTML"),
+                new("Django REST Framework", "بناء APIs احترافية")
+            },
+
+            // مسارات Mobile
+            "flutter" => new List<Step> {
+                new("Dart Basics", "الأساسيات ونظام النوع Type System"),
+                new("Flutter Widgets", "Stateless vs Stateful, Layouts"),
+                new("Navigation", "التنقل بين الشاشات وتمرير البيانات"),
+                new("API Integration", "http package, JSON serialization"),
+                new("State Management", "Provider, Riverpod, أو Bloc"),
+                new("Firebase Integration", "Auth, Firestore, Cloud Functions")
+            },
+
+            // في حالة لم يتم العثور على المسار (افتراضي)
+            _ => new List<Step> {
+                new("جاري التحديث...", "سيتم إضافة خطوات هذا المسار قريباً!"),
+                new("أساسيات البرمجة", "ابدأ بتعلم الخوارزميات وهياكل البيانات")
+            }
+        };
+    }
 }
