@@ -97,14 +97,28 @@
         {
             <div class="result-card glass-panel text-center animate__animated animate__zoomIn">
                 <div class="trophy-container">
-                    <i class="bi bi-trophy-fill trophy-icon"></i>
+                    @if (score * 10 >= 40)
+                    {
+                        <i class="bi bi-trophy-fill trophy-icon text-warning"></i>
+                    }
+                    else if (score * 10 >= 20)
+                    {
+                        <i class="bi bi-journal-bookmark-fill trophy-icon text-info"></i>
+                    }
+                    else
+                    {
+                        <i class="bi bi-emoji-frown-fill trophy-icon text-danger"></i>
+                    }
                 </div>
-                <h2 class="text-white fw-bold mb-2">أداء رائع!</h2>
+
+                <h2 class="@GetEvaluationColor() fw-bold mb-2">@GetEvaluationMessage()</h2>
+
                 <div class="final-score-box">
                     <span class="score-num">@score</span>
                     <span class="score-total">/ @questions.Count</span>
                 </div>
-                <p class="text-white-50 mb-4">مجموع النقاط: <span class="text-warning fw-bold">@(score * 10)</span></p>
+
+                <p class="text-white-50 mb-4">مجموع النقاط: <span class="@GetEvaluationColor() fw-bold">@(score * 10)</span></p>
 
                 <div class="action-buttons">
                     <button class="btn btn-primary btn-lg rounded-pill px-5" @onclick="Restart">إعادة المحاولة</button>
@@ -131,7 +145,7 @@
 </div>
 
 <style>
-        .quiz-page {
+    .quiz-page {
         background: radial-gradient(circle at top, #1e1333 0%, #080808 100%);
         min-height: 100vh;
         width: 100%;
@@ -141,7 +155,7 @@
         padding-bottom: 50px;
     }
 
-        .glass-panel {
+    .glass-panel {
         background: rgba(30, 30, 30, 0.6); /* لون داكن شفاف */
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -152,7 +166,7 @@
     }
 
     .card-bar {
-        background: #252526;
+        background: #252526; /* لون شريط VS Code */
         padding: 10px 15px;
         display: flex;          /* هذا ما يجعل العناصر أفقية */
         justify-content: space-between;
@@ -182,7 +196,7 @@
         font-family: Consolas, monospace;
     }
 
-    /* تنسيق الكود */
+    /* 3. تنسيق الكود */
     .code-block {
         background: #1e1e1e; /* خلفية الكود الداكنة */
         padding: 20px;
@@ -193,7 +207,7 @@
 
     pre { margin: 0; white-space: pre-wrap; color: #d4d4d4; font-family: Consolas, monospace; }
 
-    /* تنسيق السؤال والأزرار */
+    /*  تنسيق السؤال والأزرار */
     .card-body-content { padding: 20px; }
     .question-text { text-align: right; margin-bottom: 0; font-weight: 600; }
 
@@ -300,7 +314,50 @@
         StateHasChanged();
     }
 
-    private void Restart() => NavManager.NavigateTo($"/quiz/{Language}", true);
+    private string GetEvaluationMessage()
+    {
+        int totalScore = score * 10;
+
+        if (totalScore == 50) return "ممتاز! أداء رائع";
+        if (totalScore == 40) return "جيد جداً";
+        if (totalScore >= 20) return "يجب التحسين";
+        return "سيئ، حاول مرة أخرى";
+    }
+
+    //دالة تحديد لون النص بناء على النتيجة
+    private string GetEvaluationColor()
+    {
+        int totalScore = score * 10;
+
+        if (totalScore == 50) return "text-success"; // أخضر
+        if (totalScore == 40) return "text-info";    // أزرق سماوي
+        if (totalScore >= 20) return "text-warning"; // أصفر
+        return "text-danger";                        // أحمر
+    }
+
+    private async Task Restart()
+    {
+        // إيقاف أي مؤقت سابق
+        StopTimer();
+
+        // إعادة تعيين المتغيرات للصفر
+        currentIndex = 0;
+        score = 0;
+        timeLeft = 30;
+        isFinished = false;
+        showFeedback = false;
+        hasError = false;
+        selectedLetter = "";
+
+        StateHasChanged();
+
+        // إعادة تحميل البيانات 
+        await LoadData();
+
+        // تحديث الواجهة
+        StateHasChanged();
+    }
+
     private void StopTimer() { timer?.Stop(); timer?.Dispose(); }
     public void Dispose() => StopTimer();
 }
